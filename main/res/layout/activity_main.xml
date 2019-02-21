@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackbackground"
+    android:visibility="visible"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_Title"
+        android:layout_width="791dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fitnesscentertitle" />
+
+    <Button
+        android:id="@+id/btn_Option"
+        android:layout_width="282dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_options"
+        android:onClick="popup"
+        app:layout_constraintEnd_toStartOf="@+id/iv_DividerHeartPulse"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Title" />
+
+    <TextView
+        android:id="@+id/txt_Height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:text="HEIGHT:"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/iv_DividerHeartPulse"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Option" />
+
+    <EditText
+        android:id="@+id/editText_Feet"
+        android:layout_width="93dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="56dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_Height"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Option" />
+
+    <TextView
+        android:id="@+id/txt_Apostraphe"
+        android:layout_width="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="'"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textBox_Inches"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/editText_Feet"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Option" />
+
+    <EditText
+        android:id="@+id/textBox_Inches"
+        android:layout_width="93dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_DividerHeartPulse"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toEndOf="@+id/editText_Feet"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Option" />
+
+    <TextView
+        android:id="@+id/txt_feetInches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="FT/IN"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/iv_DividerHeartPulse"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/textBox_Inches"
+        app:layout_constraintTop_toTopOf="@+id/textBox_Inches" />
+
+    <TextView
+        android:id="@+id/txt_Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="WEIGHT:"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txt_Height"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Height" />
+
+    <EditText
+        android:id="@+id/editText_Weight"
+        android:layout_width="201dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_Weight"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Feet" />
+
+    <TextView
+        android:id="@+id/txt_lbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:text="LBS"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/iv_DividerHeartPulse"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toEndOf="@+id/editText_Weight"
+        app:layout_constraintTop_toBottomOf="@+id/txt_feetInches" />
+
+    <Button
+        android:id="@+id/btn_Bmi"
+        android:layout_width="157dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_bmi"
+        android:onClick="calculate_BMI"
+        app:layout_constraintEnd_toStartOf="@+id/btn_BodyFat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Weight" />
+
+    <Button
+        android:id="@+id/btn_Reset"
+        android:layout_width="157dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_reset"
+        android:onClick="reset"
+        app:layout_constraintEnd_toStartOf="@+id/iv_DividerHeartPulse"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toEndOf="@+id/btn_BodyFat"
+        app:layout_constraintTop_toTopOf="@+id/btn_BodyFat" />
+
+    <Button
+        android:id="@+id/btn_BodyFat"
+        android:layout_width="157dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_body_fat"
+        android:onClick="calculate_BodyFat"
+        app:layout_constraintEnd_toStartOf="@+id/iv_DividerHeartPulse"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_Bmi" />
+
+    <TextView
+        android:id="@+id/txt_BmiIndicator"
+        android:layout_width="207dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="64dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Reset"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/btn_Bmi"
+        app:layout_constraintTop_toBottomOf="@+id/btn_BodyFat" />
+
+    <ImageView
+        android:id="@+id/iv_DividerHeartPulse"
+        android:layout_width="wrap_content"
+        android:layout_height="426dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Title"
+        app:srcCompat="@drawable/heartbeat" />
+
+    <ImageView
+        android:id="@+id/iv_Results"
+        android:layout_width="229dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toEndOf="@+id/iv_DividerHeartPulse"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Title"
+        app:srcCompat="@drawable/results" />
+
+    <ImageView
+        android:id="@+id/iv_BmiResults"
+        android:layout_width="202dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_DividerHeartPulse"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Results"
+       />
+
+    <TextView
+        android:id="@+id/txt_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Name :"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/editText_Name"
+        app:layout_constraintTop_toBottomOf="@+id/iv_BmiResults" />
+
+    <EditText
+        android:id="@+id/editText_Name"
+        android:layout_width="378dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_Name" />
+
+    <TextView
+        android:id="@+id/txt_Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age :"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Name"
+        app:layout_constraintTop_toTopOf="@+id/editText_Age" />
+
+    <EditText
+        android:id="@+id/editText_Age"
+        android:layout_width="377dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Name" />
+
+    <TextView
+        android:id="@+id/txt_Gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender :"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Age"
+        app:layout_constraintTop_toTopOf="@+id/editText_Gender" />
+
+    <EditText
+        android:id="@+id/editText_Gender"
+        android:layout_width="375dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Age"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Age" />
+
+    <TextView
+        android:id="@+id/txt_Category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category :"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Gender"
+        app:layout_constraintTop_toTopOf="@+id/editText_Category" />
+
+    <EditText
+        android:id="@+id/editText_Category"
+        android:layout_width="376dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Gender"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Gender" />
+
+    <TextView
+        android:id="@+id/txt_Risk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Risk :"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Category"
+        app:layout_constraintTop_toTopOf="@+id/editText_Risk" />
+
+    <EditText
+        android:id="@+id/editText_Risk"
+        android:layout_width="375dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Category"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Category" />
+
+</android.support.constraint.ConstraintLayout>
